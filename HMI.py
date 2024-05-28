@@ -1,6 +1,54 @@
 import streamlit as st
 
-st.set_page_config(page_title="M2R Platform", page_icon="logo.png")
+# Page Configuration
+st.set_page_config(
+    page_title="M2R Platform",
+    page_icon=":recycle:",  # You can replace this with an actual icon
+    layout="wide",  # For a wider layout
+)
+
+# Custom CSS for Styling (inline for simplicity)
+st.markdown(
+    """
+    <style>
+    body {
+        font-family: sans-serif;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .hero {
+        background-color: #f0f0f0; /* Light gray background */
+        padding: 50px 0;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    .hero button {
+        background-color: #007bff; /* Blue button */
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    .hero button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+    /* Add more styles for other sections as needed */
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 # Header
 st.markdown(
@@ -9,7 +57,7 @@ st.markdown(
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="logo.png" alt="M2R Logo">
+                    <img src="https://placehold.co/150x50?text=M2R+Logo" alt="M2R Logo"> 
                 </div>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -33,67 +81,11 @@ st.markdown(
             <h1>Hello! World Changer</h1>
             <p>Cluttered with castoffs??? Don't chuck it, chuck it into cash instead!</p>
             <div class="buttons">
-                <button class="login-btn">Login</button>
-                <button class="signup-btn">Sign Up</button>
+                <button onclick="window.location.href = 'login_page.html';">Login</button> 
+                <button onclick="window.location.href = 'signup_page.html';">Sign Up</button> 
             </div>
         </div>
     </section>
     """,
     unsafe_allow_html=True,
 )
-
-# About Section
-st.markdown(
-    """
-    <section class="about">
-        <div class="container">
-            <h2>Welcome to M2R Platform</h2>
-            <p>M2R "Market of Recycle Rubbish" is a digital platform that allows users to sell recyclable waste, buy recyclable waste, and find waste banks (collection bosses) in the East Java region.</p>
-        </div>
-    </section>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Services Section
-st.markdown(
-    """
-    <section class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-items">
-                <div class="service-item">
-                    <img src="sell-icon.png" alt="Sell Waste">
-                    <h3>Sell Waste</h3>
-                    <p>Turn your recyclable waste into cash.</p>
-                </div>
-                <div class="service-item">
-                    <img src="buy-icon.png" alt="Buy Waste">
-                    <h3>Buy Waste</h3>
-                    <p>Find recyclable materials for your needs.</p>
-                </div>
-                <div class="service-item">
-                    <img src="trash-bank-icon.png" alt="Trash Bank">
-                    <h3>Trash Bank</h3>
-                    <p>Locate waste banks in East Java.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Footer
-st.markdown(
-    """
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 M2R Platform</p>
-        </div>
-    </footer>
-    """,
-    unsafe_allow_html=True,
-)
-
-        
